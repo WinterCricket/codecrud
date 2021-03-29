@@ -28,3 +28,22 @@ function selectAll(){
 	$stmt->close();
 	return $data;
 }
+
+/* select single statement */
+
+function selectSingle($id = NULL){
+	global $mysqli;
+	
+	$stmt = $mysqli->prepare('SELECT * FROM employees WHERE id = ?');
+	$stmt->bind_param('i', $id);
+	$stmt->execute();
+	$result = $stmt->get_result();
+
+	if($result->num_rows === 0){
+		echo 'No rows today';
+	}
+	$row = $result->fetch_assoc();
+
+	$stmt->close();
+	return $row;
+}

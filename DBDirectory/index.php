@@ -10,7 +10,7 @@ include('includes/functions.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CodeCrud DB</title>
-	<!-- <link rel="stylesheet" href="includes/style.css"> -->
+	<link rel="stylesheet" href="includes/style.css">
 </head>
 <body>
 	<h1>This is CodeCrud!</h1>
@@ -26,6 +26,10 @@ include('includes/functions.php');
 		<?php 
 
 			formatcode(selectAll());
+			formatcode(selectSingle(1));
+
+			$user = selectSingle(2);
+			echo "Morty, this is ".$user['fname']." ".$user['lname']." from down the street. Hey, ".$user['fname'].", your id number is ".$user['ID'].".";
 		 ?>
 	</div>
 </body>
