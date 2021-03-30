@@ -28,10 +28,10 @@ include('includes/functions.php');
 			formatcode(selectAll());
 			formatcode(selectSingle(1));
 
-			$user = selectSingle(2);
-			echo "Morty, this is ".$user['fname']." ".$user['lname']." from down the street. Hey, ".$user['fname'].", your id number is ".$user['ID'].".";
+			$user = selectSingle(3);
+			echo "Morty, this is ".$user['fname']." ".$user['lname']." from down the street. Hey, ".$user['fname'].", your id number is ".$user['ID'].". Is your phone number still ".$user['phone']."?";
 		 ?>
 	</div>
 </body>
 </html>
-</html>
+

@@ -47,3 +47,13 @@ function selectSingle($id = NULL){
 	$stmt->close();
 	return $row;
 }
+
+/* insert statement*/
+
+function insert($fname = NULL, $lname = NULL, $phone = NULL ){
+	global $mysqli;
+	$stmt = $mysqli->prepare('INSERT INTO employees(fname, lname, phone) VALUES (?, ?, ?)');
+	$stmt->bind_param('sss', $fname, $lname, $phone);
+	$stmt->execute();
+	$stmt->close();
+}
