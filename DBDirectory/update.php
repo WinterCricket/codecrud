@@ -1,9 +1,11 @@
 
 <?php 
 include('includes/functions.php');
-if(isset($_POST['btnInsert'])) :
-	insert($_POST['fname'],$_POST['lname'],$_POST['phone']);
+if(isset($_POST['btnUpdate'])) :
+	update($_POST['fname'],$_POST['lname'],$_POST['phone']);
 endif;
+
+$user = (isset($_GET['id'])) ? selectSingle($_GET['id']) : false;
 
 ?>
 
@@ -16,20 +18,26 @@ endif;
 	<link rel="stylesheet" href="includes/style.css">
 </head>
 <body>
-	<h1>Add to the Records</h1>
+	<?php 
+		if($user != false) :
+	 ?>
+	<h1>Update</h1>
 	
 	<form action="" method="post">
 		<label for="fname">First Name</label>
-		<input type="text" name="fname" id="fname" value="">
+		<input type="text" name="fname" id="fname" value="<?php echo $user['fname']; ?>">
 		<br>
 		<label for="lname">Last Name</label>
-		<input type="text" name="lname" id="lname" value="">
+		<input type="text" name="lname" id="lname" value="<?php echo $user['lname']; ?>">
 		<br>
 		<label for="phone" >Phone Number</label>
-		<input type="" name="phone" id="phone" value="">
+		<input type="" name="phone" id="phone" value="<?php echo $user['phone']; ?>">
 		<br>
-		<button name="btnInsert">Add</button>
+		<button name="btnUpdate">Update</button>
 	</form>
+	<?php else : ?>
+		<h1>User not Set. Retry!</h1>
+	<?php endif; ?>
 </body>
 </html>
 
