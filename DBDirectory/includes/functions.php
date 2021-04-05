@@ -57,3 +57,13 @@ function insert($fname = NULL, $lname = NULL, $phone = NULL ){
 	$stmt->execute();
 	$stmt->close();
 }
+
+/* update statement*/
+
+// function update($fname = NULL, $lname = NULL, $phone = NULL){
+// 	global $mysqli;
+// 	$stmt = $mysqli->prepare('INSERT INTO employees(fname, lname, phone) VALUES (?, ?, ?)');
+// 	$stmt->bind_param('sss', $fname, $lname, $phone);
+// 	$stmt->execute(); left off at minute 31 on video
+// 	$stmt->close();
+// }
