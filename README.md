@@ -3,3 +3,4 @@ This will be the corrected readme to be loaded onto local machines, to remind yo
 In this addition, we'll use git pull.
 Let's see if this will work.
 This time with fetch and merge.
+And now, try git pull again.
