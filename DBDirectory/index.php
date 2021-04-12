@@ -31,7 +31,11 @@ include('includes/functions.php');
 			$user = selectSingle(3);
 			echo "Morty, this is ".$user['fname']." ".$user['lname']." from down the street. Hey, ".$user['fname'].", your id number is ".$user['ID'].". Is your phone number still ".$user['phone']."?";
 		 ?>
-		 <h2>This is the emergency fix branch as a narrow branch change</h2>
+		 <h2>The emergency fix as been merged with master, as this shows</h2>
+
+
+		 <h3>This is the new index addition on the secretPHP branch, now merged with the master</h3>
+
 	</div>
 </body>
 </html>
