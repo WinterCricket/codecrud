@@ -6,5 +6,5 @@ This time with fetch and merge.
 
 
 
-And now, try git pull again.
+
 >>>>>>> 09f85ad71b14d387f7fafd189264d25dfba36965
