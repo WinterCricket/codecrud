@@ -31,6 +31,7 @@ include('includes/functions.php');
 			$user = selectSingle(3);
 			echo "Morty, this is ".$user['fname']." ".$user['lname']." from down the street. Hey, ".$user['fname'].", your id number is ".$user['ID'].". Is your phone number still ".$user['phone']."?";
 		 ?>
+		 <h2>This is added for a git branch called secretPHP</h2>
 	</div>
 </body>
 </html>
